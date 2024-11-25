@@ -67,7 +67,9 @@ const Inventory = () => {
             await signInWithEmailAndPassword(auth, email, password);
             setShowLoginPopup(false); // Close the popup on successful login
         } catch (error) {
-            setLoginError("Error logging in: " + error.message); // Capture and display error
+            // Type assertion to handle the error as an instance of Error
+            const errorMessage = (error as Error).message || "An unknown error occurred.";
+            setLoginError("Error logging in: " + errorMessage); // Capture and display error
             console.error("Error logging in:", error);
         }
     };
