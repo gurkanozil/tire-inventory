@@ -91,3 +91,28 @@ body {
 h1, h2, h3, p {
     margin: 0; /* Remove default margin for headings and paragraphs */
 }
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+}
+
+#root {
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer vertically */
+    min-height: 100vh; /* Ensure the root takes full height */
+}
+
+header, footer {
+    padding: 1rem;
+    background: linear-gradient(to bottom, #047857, #34d399, #047857); /* Gradient for header and footer */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+}
+
+main {
+    flex: 1; /* Allow main content to grow and fill available space */
+    padding: 2rem; /* Add padding for main content */
+    background-color: white; /* Set main background to white */
+    color: black; /* Set all text to black */
+}
