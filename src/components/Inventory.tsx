@@ -36,7 +36,12 @@ const Inventory = () => {
             <h1>Tire Inventory</h1>
             {user ? (
                 <div>
-                    {/* Render inventory management options */}
+                    <h2>Welcome, {user.email}</h2>
+                    <ul>
+                        {items.map(item => (
+                            <li key={item.id}>{item.brand} - {item.size} - {item.amount}</li>
+                        ))}
+                    </ul>
                 </div>
             ) : (
                 <div>

@@ -1,18 +1,26 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Inventory from './components/Inventory';
 import Login from './components/Login';
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Inventory />} />
+        <Route path="/" element={
+          <div>
+            <h1>Welcome to the Tire Inventory</h1>
+            <Link to="/login">
+              <button>Log In</button>
+            </Link>
+            <Inventory />
+          </div>
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/count" element={
           <>
@@ -40,7 +48,7 @@ function App() {
         } />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
