@@ -22,6 +22,7 @@ const Inventory = () => {
     const [showLoginPopup, setShowLoginPopup] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState('');
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -61,10 +62,12 @@ const Inventory = () => {
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoginError(''); // Reset any previous error
         try {
             await signInWithEmailAndPassword(auth, email, password);
             setShowLoginPopup(false); // Close the popup on successful login
         } catch (error) {
+            setLoginError("Error logging in: " + error.message); // Capture and display error
             console.error("Error logging in:", error);
         }
     };
@@ -170,6 +173,7 @@ const Inventory = () => {
                             />
                             <button type="submit">Log In</button>
                         </form>
+                        {loginError && <p style={{ color: 'red' }}>{loginError}</p>} {/* Display error message */}
                         <button onClick={() => setShowLoginPopup(false)}>Close</button>
                     </div>
                 )}
