@@ -1,7 +1,7 @@
 {
   "name": "my-inventory-app",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "homepage": "https://gurkanozil.github.io/tire-inventory",
   "scripts": {
     "predeploy": "npm run build",
