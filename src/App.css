@@ -82,7 +82,7 @@ button:hover {
 }
 
 body {
-    background: linear-gradient(to bottom, #047857, #29a577, #047857); /* Emerald gradient */
+    background-color: white; /* Set main background to white */
     color: black; /* Set all text to black */
     margin: 0; /* Remove default margin */
     font-family: Arial, sans-serif; /* Optional: Set a default font */
