@@ -80,3 +80,14 @@ button {
 button:hover {
     background-color: #535bf2;
 }
+
+body {
+    background: linear-gradient(to bottom, #047857, #29a577, #047857); /* Emerald gradient */
+    color: black; /* Set all text to black */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
+h1, h2, h3, p {
+    margin: 0; /* Remove default margin for headings and paragraphs */
+}
