@@ -7,9 +7,10 @@ const firebaseConfig = {
     apiKey: "AIzaSyAQsCgNUw6qp_RX3D_9LQMJGD-7l-qTDNU",
     authDomain: "gurkanozil-github-io.firebaseapp.com",
     projectId: "gurkanozil-github-io",
-    storageBucket: "gurkanozil-github-io.appspot.com",
+    storageBucket: "gurkanozil-github-io.firebasestorage.app",
     messagingSenderId: "736277185733",
-    appId: "YOUR_APP_ID" // Replace with your actual app ID. You can find your app ID in the Firebase console under Project Settings > General > Your apps. It is listed as "App ID" for each registered app.
+    appId: "1:736277185733:web:bb227b6b00e35334611cac",
+    measurementId: "G-V05CZ3KNH4"
 };
 
 // Initialize Firebase
