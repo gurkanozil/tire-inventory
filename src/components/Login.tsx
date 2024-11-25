@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Login = () => {
     const handleLogin = () => {
         // Implement your login logic here

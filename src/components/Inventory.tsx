@@ -1,24 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { auth, db } from '../firebaseConfig';
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, User } from 'firebase/auth';
 import { collection, getDocs } from 'firebase/firestore';
 
+// Define an interface for the tire item
+interface TireItem {
+    id: string;
+    brand: string;
+    size: string;
+    amount: number;
+}
+
 const Inventory = () => {
-    const [items, setItems] = useState([]);
-    const [user, setUser] = useState(null);
+    const [items, setItems] = useState<TireItem[]>([]); // Use the TireItem type
+    const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user);
         });
 
         const fetchItems = async () => {
             const querySnapshot = await getDocs(collection(db, "tires"));
-            const itemsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const itemsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as TireItem[]; // Cast to TireItem[]
             setItems(itemsList);
         };
 
         fetchItems();
+
+        return () => unsubscribe();
     }, []);
 
     return (

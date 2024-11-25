@@ -1,17 +1,22 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyAQsCgNUw6qp_RX3D_9LQMJGD-7l-qTDNU",
+    authDomain: "gurkanozil-github-io.firebaseapp.com",
+    projectId: "gurkanozil-github-io",
+    storageBucket: "gurkanozil-github-io.appspot.com",
+    messagingSenderId: "736277185733",
+    appId: "YOUR_APP_ID" // Replace with your actual app ID. You can find your app ID in the Firebase console under Project Settings > General > Your apps. It is listed as "App ID" for each registered app.
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app); 
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+export { auth, db };
+
+
