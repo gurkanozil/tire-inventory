@@ -1,6 +1,8 @@
 # Tire Inventory App
 
 This project is a Tire Inventory application built with React, TypeScript, and Vite. It provides a user-friendly interface for managing tire inventory, including features for user authentication, adding, editing, and deleting tire items. The application uses Google Firebase to authenticate users and Google Firestore as a serverless database.
+![Screenshot 2024-11-27 050039](https://github.com/user-attachments/assets/d4924a39-db95-44af-b817-f18473b13361)
+![Screenshot 2024-11-27 050048](https://github.com/user-attachments/assets/8112232d-f7c0-4ba1-8e6a-f38f25593fe0)
 
 ## Features
 
