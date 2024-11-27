@@ -3,7 +3,7 @@ const Header = () => {
         <header style={{ 
             width: '100%', 
             padding: '1rem', 
-            background: 'linear-gradient(to bottom, #047857, #34d399, #047857)', 
+            background: 'linear-gradient(to bottom, #047857, #24936B, #047857)', 
             color: 'white', 
             position: 'relative' 
         }}>
